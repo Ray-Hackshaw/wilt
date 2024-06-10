@@ -6,11 +6,12 @@ import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import './global.css'
+import { Button } from '@/components/ui/button'
+import { Github } from 'lucide-react'
 
 const meta = {
-  title: 'Hunter Chang - Website',
-  description:
-    'Sleep deprived father. FE Engineer in China. Lover of Ramen and Kpop',
+  title: "What I'm Listening To",
+  description: 'Blog for album reviews for music I listen to',
   image: `${WEBSITE_HOST_URL}/og-preview.jpg`,
 }
 
@@ -66,12 +67,11 @@ export default function RootLayout({
           </main>
           <footer className="py-16">
             <Container>
-              <p>
-                Built by{' '}
-                <Link className="link" href="https://twitter.com/hunterhchang">
-                  Hunter Chang
-                </Link>
-              </p>
+              <Button asChild>
+                <a href="https://github.com/ChangoMan/nextjs-mdx-blog">
+                  <Github className="mr-1" /> View source
+                </a>
+              </Button>
             </Container>
           </footer>
         </ThemeProvider>
