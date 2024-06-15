@@ -51,14 +51,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <header className="sticky top-0 py-4">
+          <header className="top-0 py-4 lg:sticky">
             <div className="mx-auto flex max-w-2xl items-center justify-between py-6 lg:max-w-7xl">
               <Navigation />
               <ThemeSwitch />
             </div>
           </header>
-          <main>
-            <Container>{children}</Container>
+          <main className="lg:-mt-10 xl:-mt-24">
+            <Container className="">{children}</Container>
           </main>
           <footer className="py-16"></footer>
         </ThemeProvider>
