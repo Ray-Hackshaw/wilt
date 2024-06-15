@@ -24,6 +24,16 @@ const Post = defineDocumentType(() => ({
       description: 'The description of the post',
       required: true,
     },
+    artist: {
+      type: 'string',
+      description: 'The artist/musician',
+      required: true,
+    },
+    cover: {
+      type: 'string',
+      description: 'The cover image of the post',
+      required: false,
+    },
   },
   computedFields: {
     url: {

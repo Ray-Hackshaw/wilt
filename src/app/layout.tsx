@@ -4,10 +4,7 @@ import { Navigation } from '@/components/Navigation'
 import ThemeSwitch from '@/components/ThemeSwitch'
 import { WEBSITE_HOST_URL } from '@/lib/constants'
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import './global.css'
-import { Button } from '@/components/ui/button'
-import { Github } from 'lucide-react'
 
 const meta = {
   title: "What I'm Listening To",
@@ -54,26 +51,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <header className="py-4">
-            <Container>
-              <div className="flex items-center justify-between py-6">
-                <Navigation />
-                <ThemeSwitch />
-              </div>
-            </Container>
+          <header className="sticky top-0 py-4">
+            <div className="mx-auto flex max-w-2xl items-center justify-between py-6 lg:max-w-7xl">
+              <Navigation />
+              <ThemeSwitch />
+            </div>
           </header>
           <main>
             <Container>{children}</Container>
           </main>
-          <footer className="py-16">
-            <Container>
-              <Button asChild>
-                <a href="https://github.com/ChangoMan/nextjs-mdx-blog">
-                  <Github className="mr-1" /> View source
-                </a>
-              </Button>
-            </Container>
-          </footer>
+          <footer className="py-16"></footer>
         </ThemeProvider>
       </body>
     </html>

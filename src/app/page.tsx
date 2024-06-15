@@ -18,11 +18,9 @@ export default function Home() {
         <h2>Recent posts:</h2>
       </div>
       <div className="mt-10 space-y-12 border-t border-gray-200 pt-10 dark:border-gray-700">
-        {!posts ||
-          (posts.length === 0 && <p>No posts yet. Check back again later.</p>)}
-        {/* {posts.map((post, idx) => (
+        {posts.map((post, idx) => (
           <PostCard key={idx} {...post} />
-        ))} */}
+        ))}
       </div>
     </div>
   )
