@@ -39,19 +39,10 @@ export default function About() {
       <h1>About</h1>
       <p>
         I wanted to make a content-driven, markdown site and also wanted to talk
-        about music. What an original idea.
+        about the music I have been listening to.
       </p>
       <p>Blog posts are written with MDX and processed through Contentlayer.</p>
-      <p>Don&apos;t take anything I put on here too seriously.</p>
-      <p>
-        If you would like to contact me, you can at
-        <div className="flex items-center gap-2">
-          <MailIcon /> ray@rayhackshaw.com
-        </div>
-        <div className="flex items-center gap-2">
-          <PhoneCallIcon /> +642102328715
-        </div>
-      </p>
+      
       <footer className="border-t border-gray-200 py-16 dark:border-gray-700">
         <div className="flex gap-2">
           Made by Ray Hackshaw
